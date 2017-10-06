@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Abreviación</th>
+        <th>Funciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for moneda in monedas %}
+        <tr>
+          <th scope="row">{{ moneda.id }}</th>
+          <td>{{ moneda.nombre }}</td>
+          <td>{{ moneda.abreviacion }}</td>
+          <td></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock%}
